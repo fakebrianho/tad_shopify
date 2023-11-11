@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ 'Tad Fab' | escape }}</title>
+        {{ 'style.css' | asset_url | stylesheet_tag }}
+    </head>
+    <body>
+        <main class='image_container'>
+            <section class='top_navigation'>
+                <p class='nav_logo'>TADFAB</p>
+                <p class='nav_login'>ENTER USING PASSWORD</p>
+            </section>
+    
+            <!-- Your existing HTML content for the loading page -->
+            <section class='content'>
+                <p class='content_comingSoon'>COMING SOON</p>
+                <p class='content_signUp'>SIGN UP & BE THE FIRST TO KNOW.</p>
+                <div class='content_subscribe'>
+                    <input class='emailPassword' type="text" placeholder='ENTER YOUR EMAIL'>
+                    <div class='content_arrow'>
+                        <span>&#8594;</span>
+                    </div>
+                </div>
+            </section>
+            <div class='cover'></div>
+            {% for i in (1..9) %}
+            <div class='image_{{ i }} slide {% if forloop.first %}active{% endif %}'>
+                <img src="{{ '/' | append: i | append: '.png' | asset_url }}" alt="">
+            </div>
+            {% endfor %}
+            <footer class='bottom_navigation'>
+                <div class='bottom_links'>
+                    <!-- Static links or placeholders; update these as needed -->
+                    <a href="#" class='footer_instagram'>INSTAGRAM</a>
+                    <a href="#" class='footer_redbook'>RED BOOK</a>
+                    <a href="#" class='footer_tmall'>TMALL</a>
+                </div>
+            </footer>
+        </main>
+        {{ 'index.js' | asset_url | script_tag }}
+    </body>
+    </html>
+    

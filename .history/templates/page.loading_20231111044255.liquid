@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ 'Tad Fab' | escape }}</title>
+        {{ 'style.css' | asset_url | stylesheet_tag }}
+    </head>
+    <body>
+        <main class='image_container'>
+            <section class='top_navigation'>
+                <p class='nav_logo'>TADFAB</p>
+                <p class='nav_login'>ENTER USING PASSWORD</p>
+            </section>
+    
+            <!-- Your existing HTML content for the loading page -->
+    
+            <footer class='bottom_navigation'>
+                <div class='bottom_links'>
+                    <!-- Static links or placeholders; update these as needed -->
+                    <a href="#" class='footer_instagram'>INSTAGRAM</a>
+                    <a href="#" class='footer_redbook'>RED BOOK</a>
+                    <a href="#" class='footer_tmall'>TMALL</a>
+                </div>
+            </footer>
+        </main>
+        {{ 'index.js' | asset_url | script_tag }}
+    </body>
+    </html>
+    
