@@ -1,4 +1,4 @@
-let imageIndex = 0 // start with the first image
+let slideIndex = 0 // start with the first image
 const slides = document.querySelectorAll('.slide')
 const enterPassword = document.querySelector('.nav_login')
 const form = document.querySelector('#mainForm') // Add your form's ID
@@ -7,12 +7,12 @@ function showSlides() {
 		slides[i].classList.remove('active') // hide all slides
 	}
 
-	imageIndex++
-	if (imageIndex > slides.length) {
-		imageIndex = 1 // reset to first image if it's the last one
+	slideIndex++
+	if (slideIndex > slides.length) {
+		slideIndex = 1 // reset to first image if it's the last one
 	}
 
-	slides[imageIndex - 1].classList.add('active') // show current image
+	slides[slideIndex - 1].classList.add('active') // show current image
 	setTimeout(showSlides, 4000) // change image every 3 seconds
 }
 window.onload = function () {
@@ -20,6 +20,7 @@ window.onload = function () {
 }
 
 enterPassword.addEventListener('click', () => {
+	console.log(form)
 	const comingSoon = document.querySelector('.content_comingSoon')
 	const signUp = document.querySelector('.content_signUp')
 	const passwordInput = document.querySelector('.content_subscribe')
