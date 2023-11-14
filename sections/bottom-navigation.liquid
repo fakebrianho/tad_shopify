@@ -1,0 +1,34 @@
+<footer class='bottom_navigation'>
+    <div class='bottom_links'>
+        <a href="{{ section.settings.url_instagram }}" class='footer_instagram'>INSTAGRAM</a>
+        <a href="{{ section.settings.url_redBook }}" class='footer_redbook'>RED BOOK</a>
+        <a href="{{ section.settings.url_tmall }}" class='footer_tmall'>TMALL</a>
+    </div>
+</footer>
+
+
+{% schema %}
+{
+    "name": "Bottom Navigation",
+    "settings": [
+        {
+            "type": "text",
+            "id": "url_instagram",
+            "label": "Instagram Link",
+            "default": "#"
+        },
+        {
+            "type": "text",
+            "id": "url_redBook",
+            "label": "Red Book Link",
+            "default": "#"
+        },
+        {
+            "type": "text",
+            "id": "url_tmall",
+            "label": "Tmall Link",
+            "default": "#"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,24 @@
+<section class='top_navigation'>
+    <p class='nav_logo'>{{ section.settings.logo_text }}</p>
+    <p class='nav_login'>{{ section.settings.enter_password_text }}</p>
+</section>
+
+{% schema %}
+{
+    "name": "Top Navigation",
+    "settings": [
+        {
+            "type": "text",
+            "id": "logo_text",
+            "label": "Logo Text",
+            "default": "TADFAB"
+        },
+        {
+            "type": "text",
+            "id": "enter_password_text",
+            "label": "Enter Password Text",
+            "default": "ENTER USING PASSWORD"
+        }
+    ]
+}
+{% endschema %}
